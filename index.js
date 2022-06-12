@@ -23,3 +23,26 @@ process.stdin.on("data", data => {
         process.exit()
     }
 })
+
+process.on('exit', () => {
+    console.log(`
+    Hello Nick
+
+    Hoje você aprendeu:
+    ${anwsers[0]};
+
+    Aquilo que te irritou foi:
+    ${anwsers[1]};
+
+    Ação para melhorar:
+    ${anwsers[2]};
+
+    Te deixou feliz:
+    ${anwsers[3]};
+
+    Quem ajudou:
+    ${anwsers[4]}
+
+    Apesar de tudo, o saldo do dia parece bom. Até amanhã!
+    `)
+})
